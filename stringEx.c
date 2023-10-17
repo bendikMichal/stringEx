@@ -21,7 +21,7 @@ int findChar (char *str, char c) {
 			return i;
 		}
 	}
-	return 0;
+	return -1;
 }
 
 int countChar (char *str, char c) {
