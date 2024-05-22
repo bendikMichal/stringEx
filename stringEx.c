@@ -25,7 +25,7 @@ int findChar (char *str, char c) {
 	return -1;
 }
 
-int findLastChar (char *str, char c) {
+int findLastCharOccurence (char *str, char c) {
     char *found = strrchr(str, c);
     if (found == NULL) return -1;
 
