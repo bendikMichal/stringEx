@@ -3,6 +3,7 @@
 # include <string.h>
 
 void substring (char *original, char *newS, int start, int end) {
+    if (start < 0) start = 0;
     if (end > strlen(original)) {
         end = strlen(original);
     }
@@ -22,6 +23,14 @@ int findChar (char *str, char c) {
 		}
 	}
 	return -1;
+}
+
+int findLastChar (char *str, char c) {
+    char *found = strrchr(str, c);
+    if (found == NULL) return -1;
+
+    int index = found - str;
+    return index;
 }
 
 int countChar (char *str, char c) {
