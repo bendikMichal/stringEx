@@ -67,3 +67,15 @@ int getIndexOfNth (char *str, char chr, int nth) {
 
 	return -1;
 }
+
+int findStringIndex (char *str, char *str_to_find) {
+	int fl = strlen(str_to_find);
+
+	for (int i = 0; i < strlen(str); i++) {
+		if (strncmp(str + i, str_to_find, fl) == 0) {
+			return i;
+		}
+	}
+
+	return -1;
+}
