@@ -52,3 +52,18 @@ int strlenEx (char *str) {
         i++;
     }
 }
+
+int getIndexOfNth (char *str, char chr, int nth) {
+	int count = 0;
+
+	for (int i = 0; i < strlen(str); i++) {
+		if (str[i] == chr) {
+			count ++;
+			if (count >= nth) {
+				return i;
+			}
+		}
+	}
+
+	return -1;
+}
